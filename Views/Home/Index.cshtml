@@ -1,0 +1,27 @@
+﻿@model RazorForm.Models.MeaningResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Meaning of Life</title>
+</head>
+<body>
+    <form asp-action="Index" method="post">
+        <div asp-validation-summary="All"></div>
+            <p>
+                <label asp-for="Name">Name:</label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Response">What is the Meaning of Life?</label>
+                <input asp-for="Response" />
+            </p>
+            <button type="submit">Submit Meaning</button>
+    </form>
+</body>
+</html>

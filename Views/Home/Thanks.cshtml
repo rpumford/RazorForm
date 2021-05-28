@@ -1,0 +1,27 @@
+﻿@model RazorForm.Models.MeaningResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks For Playing!</title>
+</head>
+<body>
+    <p>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.Response == "42")
+        {
+            @:That is correct!  The meaning of life is 42.
+        }
+        else
+        {
+            @:Well...  that's an interesting theory...
+        }
+    </p>
+    <p>Click <a asp-action="Index">here</a> to try again.</p>
+</body>
+</html>
